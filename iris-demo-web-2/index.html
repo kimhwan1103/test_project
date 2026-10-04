@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SoftBank Hackathon 2026 Term1 予選。テーマは One Action, Infinite Clouds.（参加者による非公式ページ）" />
+    <title>SoftBank Hackathon 2026 · Term1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span>Hackathon 2026 · Term1</a>
+      <div class="topbar-right">
+        <nav data-i18n-aria="navLabel" aria-label="メインメニュー">
+          <a href="#theme" data-i18n="nav.theme">テーマ</a>
+          <a href="#judging" data-i18n="nav.judging">審査</a>
+          <a href="#schedule" data-i18n="nav.schedule">スケジュール</a>
+          <a href="#venue" data-i18n="nav.venue">会場</a>
+          <a href="#demos" data-i18n="nav.demos">デモ</a>
+        </nav>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" lang="ja" data-lang="ja" aria-pressed="true">日本語</button>
+          <button type="button" lang="ko" data-lang="ko" aria-pressed="false">한국어</button>
+          <button type="button" lang="en" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">TERM 1 · <span data-i18n="hero.stage">予選</span></p>
+        <h1>SoftBank<br />Hackathon 2026</h1>
+        <p class="powered">powered by KOREC &amp; Progate</p>
+        <p class="hero-meta"><span id="event-dates"></span> · <span data-i18n="city">ソウル</span></p>
+        <div class="countdown" role="timer" aria-live="off">
+          <span class="countdown-label" id="countdown-label"></span>
+          <span class="countdown-value" id="countdown-value"></span>
+        </div>
+      </section>
+
+      <section class="section" id="theme">
+        <h2 data-i18n="theme.title">テーマ</h2>
+        <div class="theme">
+          <p class="theme-name">One Action,<br />Infinite Clouds.</p>
+          <p class="theme-desc" data-i18n="theme.desc">ローカルで作成した Web アプリケーションを、ワンタッチでデプロイ。<br />AI をフル活用した、Google Cloud・AWS などのハイパースケーラー、またはオンプレ環境（ローカル）へ簡単にデプロイできるシステムを作ってみよう！</p>
+        </div>
+      </section>
+
+      <section class="section" id="judging">
+        <h2 data-i18n="judging.title">審査基準</h2>
+        <p class="note" data-i18n="judging.note">合計100点。デプロイされるアプリではなく、デプロイするシステム自体を評価します。</p>
+        <ul class="criteria">
+          <li style="--score: 30">
+            <span class="criteria-name" data-i18n="c1.name">完成度・デモプレイ</span>
+            <span class="criteria-bar" aria-hidden="true"><span></span></span>
+            <span class="criteria-score">30</span>
+            <span class="criteria-desc" data-i18n="c1.desc">ローカルとクラウドの両方へのデプロイを、その場でデモできるか</span>
+          </li>
+          <li style="--score: 30">
+            <span class="criteria-name" data-i18n="c2.name">クラウド活用レベル</span>
+            <span class="criteria-bar" aria-hidden="true"><span></span></span>
+            <span class="criteria-score">30</span>
+            <span class="criteria-desc" data-i18n="c2.desc">環境差分の吸収・ポータビリティが設計に反映されているか</span>
+          </li>
+          <li style="--score: 20">
+            <span class="criteria-name" data-i18n="c3.name">チーム開発</span>
+            <span class="criteria-bar" aria-hidden="true"><span></span></span>
+            <span class="criteria-score">20</span>
+            <span class="criteria-desc" data-i18n="c3.desc">設計が文書化され、代替案・議論の過程とともに形にできたか</span>
+          </li>
+          <li style="--score: 10">
+            <span class="criteria-name" data-i18n="c4.name">面白さ・独自性</span>
+            <span class="criteria-bar" aria-hidden="true"><span></span></span>
+            <span class="criteria-score">10</span>
+            <span class="criteria-desc" data-i18n="c4.desc">対応環境の広さや UX など、独自のこだわり</span>
+          </li>
+          <li style="--score: 10">
+            <span class="criteria-name" data-i18n="c5.name">AI 活用</span>
+            <span class="criteria-bar" aria-hidden="true"><span></span></span>
+            <span class="criteria-score">10</span>
+            <span class="criteria-desc" data-i18n="c5.desc">AI 活用の工夫ができているか</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="schedule">
+        <h2 data-i18n="schedule.title">スケジュール</h2>
+        <p class="note" data-i18n="schedule.note">時刻は韓国時間（KST）。状況により変更される場合があります。</p>
+        <div class="days">
+          <div class="day">
+            <h3>Day 1 <small id="day1-date"></small></h3>
+            <ol class="timeline" data-date="2026-10-03">
+              <li data-start="09:30" data-end="10:00"><time>09:30</time><span data-i18n="d1s1">開場・受付</span></li>
+              <li data-start="10:00" data-end="10:30"><time>10:00</time><span data-i18n="d1s2">オープニング</span></li>
+              <li data-start="10:30" data-end="14:00"><time>10:30</time><span data-i18n="d1s3">開発時間</span></li>
+              <li data-start="14:00" data-end="17:00"><time>14:00</time><span data-i18n="d1s4">中間報告</span></li>
+              <li data-start="17:45" data-end="18:00"><time>17:45</time><span data-i18n="d1s5">1日目クローズ</span></li>
+            </ol>
+          </div>
+          <div class="day">
+            <h3>Day 2 <small id="day2-date"></small></h3>
+            <ol class="timeline" data-date="2026-10-04">
+              <li data-start="09:30" data-end="10:00"><time>09:30</time><span data-i18n="d2s1">開場・受付</span></li>
+              <li data-start="10:00" data-end="14:00"><time>10:00</time><span data-i18n="d2s2">開発時間</span></li>
+              <li data-start="15:00" data-end="16:30"><time>15:00</time><span data-i18n="d2s3">成果発表</span></li>
+              <li data-start="16:30" data-end="17:30"><time>16:30</time><span data-i18n="d2s4">懇親会 &amp; QA会</span></li>
+              <li data-start="17:30" data-end="18:00"><time>17:30</time><span data-i18n="d2s5">表彰式</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <h3 class="sub-title" data-i18n="roadmap.title">選考の流れ</h3>
+        <ol class="roadmap">
+          <li class="is-current"><strong data-i18n="r1">予選 1</strong><span>10/3 – 4</span></li>
+          <li><strong data-i18n="r2">予選 2</strong><span>10/10 – 11</span></li>
+          <li><strong data-i18n="r3">本選</strong><span>11/7 – 8</span></li>
+          <li><strong data-i18n="r4">特別選考</strong><span data-i18n="r4.note">面接確約</span></li>
+        </ol>
+        <p class="note" data-i18n="roadmap.note">本選への案内はチームではなく個人ごとに決まり、10/26 夕方にメールで通知されます。</p>
+      </section>
+
+      <section class="section" id="venue">
+        <h2 data-i18n="venue.title">会場</h2>
+        <div class="card venue">
+          <p class="venue-name" data-i18n="venue.name">スペースシェア中部センター 8F エメラルドホール</p>
+          <dl>
+            <dt data-i18n="venue.address">住所</dt>
+            <dd data-i18n="venue.addressValue">ソウル 中区 奨忠壇路 247 グッドモーニングシティ 8・9階</dd>
+            <dt data-i18n="venue.hours">時間</dt>
+            <dd data-i18n="venue.hoursValue">10:00 – 18:00（受付 9:30〜）。会場は18時に閉まります。</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="demos">
+        <h2 data-i18n="demos.title">私たちのデモ</h2>
+        <p class="note" data-i18n="demos.note">デプロイシステムのデモ用サンプルアプリです。</p>
+        <div class="demos">
+          <article class="card demo">
+            <div class="demo-head">
+              <span class="demo-tag">Demo 1 · WAS + DB</span>
+              <a class="demo-link" id="demo1-link" target="_blank" rel="noopener" data-i18n="open">開く</a>
+            </div>
+            <h3>Iris Commerce Admin</h3>
+            <p data-i18n="demo1.desc">日本向けECの管理画面。ダッシュボード、注文管理、商品のCRUD。起動のたびにデータを初期化します。</p>
+            <div class="flow" aria-label="Browser → Express → PostgreSQL">
+              <span>Browser</span><i>→</i><span>Express<small>Node.js</small></span><i>→</i><span>PostgreSQL</span>
+            </div>
+          </article>
+          <article class="card demo is-current">
+            <div class="demo-head">
+              <span class="demo-tag">Demo 2 · Static</span>
+              <span class="demo-link" data-i18n="here">表示中</span>
+            </div>
+            <h3>Hackathon Page</h3>
+            <p data-i18n="demo2.desc">このページ。ビルド不要の静的サイトを、Caddyが配信しています。</p>
+            <div class="flow" aria-label="Browser → Caddy → HTML, CSS, JS">
+              <span>Browser</span><i>→</i><span>Caddy<small>Railpack</small></span><i>→</i><span>HTML · CSS · JS</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="logo"><span class="logo-mark" aria-hidden="true"></span>Hackathon 2026 · Term1</span>
+      <small data-i18n="footer">参加者が作成した非公式のデモページです。内容はキックオフ資料に基づきます。</small>
+    </footer>
+  </body>
+</html>
